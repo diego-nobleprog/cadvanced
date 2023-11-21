@@ -14,7 +14,6 @@ typedef struct {
 
 // Prototipos de funciones
 Libro *agregarLibro(Libro *libros, int *n, const char *titulo, const char *autor, int anio);
-void mostrarLibros(Libro *libros, int n);
 
 int main() {
     Libro *libros = NULL; // Puntero para array dinámico de libros
@@ -25,7 +24,7 @@ int main() {
     libros = agregarLibro(libros, &n, "1984", "George Orwell", 1949);
 
     // Mostrar libros
-    mostrarLibros(libros, n);
+    // mostrarLibros(libros, n);
 
     // Liberar memoria
     free(libros);
@@ -43,10 +42,4 @@ Libro *agregarLibro(Libro *libros, int *n, const char *titulo, const char *autor
     libros[*n].anio = anio;
     (*n)++;
     return libros;
-}
-
-void mostrarLibros(Libro *libros, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("Libro %d: %s, %s, %d\n", i + 1, libros[i].titulo, libros[i].autor, libros[i].anio);
-    }
 }
