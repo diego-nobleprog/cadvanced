@@ -14,7 +14,6 @@ typedef struct {
 // Prototipos de funciones
 void createFile(File files[], int *fileCount);
 void deleteFile(File files[], int *fileCount);
-void listFiles(File files[], int fileCount);
 
 // Función principal
 int main() {
@@ -26,7 +25,7 @@ int main() {
 
     // Bucle principal del programa
     while (1) {
-        printf("Comandos disponibles: create, delete, list, exit\n");
+        printf("Comandos disponibles: create, delete, exit\n");
         printf("Introduce un comando: ");
         scanf("%s", command);
 
@@ -34,8 +33,6 @@ int main() {
             createFile(files, &fileCount);
         } else if (strcmp(command, "delete") == 0) {
             deleteFile(files, &fileCount);
-        } else if (strcmp(command, "list") == 0) {
-            listFiles(files, fileCount);
         } else if (strcmp(command, "exit") == 0) {
             break;
         } else {
@@ -75,11 +72,4 @@ void deleteFile(File files[], int *fileCount) {
         }
     }
     printf("Archivo no encontrado.\n");
-}
-
-void listFiles(File files[], int fileCount) {
-    printf("Archivos:\n");
-    for (int i = 0; i < fileCount; i++) {
-        printf("Nombre: %s, Contenido: %s\n", files[i].filename, files[i].content);
-    }
 }
