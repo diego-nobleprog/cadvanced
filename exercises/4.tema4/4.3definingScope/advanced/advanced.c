@@ -5,12 +5,12 @@
 #define MAX_REGISTROS 10
 
 typedef struct {
-    char nombreCiudad[50];
+    char nombre_Ciudad[50];
     float temperaturas[MAX_REGISTROS];
     int contadorTemperaturas;
 } RegistroCiudad;
 
-void agregarTemperatura(RegistroCiudad *registro, float temp);
+void agregarTemperatura(RegistroCiudad registro, float temp);
 float calcularPromedio(RegistroCiudad registro);
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
             agregarTemperatura(&registros[numCiudades], temp);
 
             printf("¿Deseas agregar otra temperatura? (s/n): ");
-            scanf(" %c", &continuar); // Nota el espacio antes de %c para capturar el salto de línea anterior
+            scanf(" %c", &continue); // Nota el espacio antes de %c para capturar el salto de línea anterior
         } while (continuar == 's');
 
         numCiudades++;
@@ -50,7 +50,7 @@ int main() {
     return 0;
 }
 
-void agregarTemperatura(RegistroCiudad *registro, float temp) {
+void agregarTemperatura(RegistroCiudad registro, float temp) {
     if (registro->contadorTemperaturas < MAX_REGISTROS) {
         registro->temperaturas[registro->contadorTemperaturas] = temp;
         registro->contadorTemperaturas++;
