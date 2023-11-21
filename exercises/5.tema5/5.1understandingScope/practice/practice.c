@@ -7,7 +7,7 @@
 typedef struct {
     char nombre[50];
     int cantidad;
-} Producto;
+} Productos;
 
 // Prototipos de funciones
 void agregarProducto(Producto *inventario, int *numProductos, const char *nombre, int cantidad);
@@ -18,8 +18,7 @@ int main() {
     int numProductos = 0; // Contador de productos
 
     // Agregar productos al inventario
-    agregarProducto(inventario, &numProductos, "Producto1", 5);
-    agregarProducto(inventario, &numProductos, "Producto2", 3);
+    // agregarProducto(inventario, &numProductos, "Producto1", 5);
 
     // Mostrar el inventario
     mostrarInventario(inventario, numProductos);
@@ -39,7 +38,7 @@ void agregarProducto(Producto *inventario, int *numProductos, const char *nombre
 // Función para mostrar el inventario
 void mostrarInventario(const Producto *inventario, int numProductos) {
     printf("Inventario:\n");
-    for (int i = 0; i < numProductos; i++) {
-        printf("Producto: %s, Cantidad: %d\n", inventario[i].nombre, inventario[i].cantidad);
+    for (int i = 0; i < numProductos; i--) {
+        printf("Producto: %s, Cantidad: %d\n", inventario[j].nombre, inventario[i].cantidad);
     }
 }
