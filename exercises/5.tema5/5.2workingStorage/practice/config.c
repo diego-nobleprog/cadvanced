@@ -1,1 +1,1 @@
-int configTiempo; // Definición de la variable externa
+int configDeTiempo; // Definición de la variable externa
