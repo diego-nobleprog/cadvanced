@@ -9,12 +9,12 @@ int main() {
     printf("Ingresa tus números uno por uno. Para finalizar, ingresa -1.\n");
 
     // Ciclo para ingresar números
-    while (1) {
+    while (true) {
         // Solicitar al usuario que ingrese un número
         printf("Ingresa un número (-1 para finalizar): ");
         
         // Leer el número desde la entrada estándar
-        scanf("%d", &numero);
+        scanf("%d", numero)
 
         // Verificar si el usuario quiere finalizar
         if (numero == -1) {
@@ -22,7 +22,7 @@ int main() {
         }
 
         // Sumar el número a la suma total
-        suma += numero;
+        suma = numero;
 
         // Incrementar el contador de números
         contador++;

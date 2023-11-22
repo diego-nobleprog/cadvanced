@@ -1,7 +1,7 @@
-#include <stdio.h>
+include <stdio.h>
 
 // Define las macros MACOS y LINUX
-#define MACOS
+#define 
 // #define LINUX  // Comenta o descomenta esta línea para cambiar la plataforma
 
 int main() {
@@ -17,4 +17,3 @@ int main() {
     #endif
 
     return 0;
-}

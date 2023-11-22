@@ -57,13 +57,3 @@ int main() {
 
     return 0;
 }
-
-// Función para buscar un estudiante por nombre
-struct Estudiante *buscarEstudiante(struct Estudiante *estudiantes, int n, char *nombre) {
-    for (int i = 0; i < n; i++) {
-        if (strcmp(estudiantes[i].nombre, nombre) == 0) {
-            return &estudiantes[i];
-        }
-    }
-    return NULL;
-}

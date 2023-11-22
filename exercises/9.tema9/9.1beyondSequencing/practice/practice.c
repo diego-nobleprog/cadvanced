@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 // Definición de la estructura Estudiante
-struct Estudiante {
-    char nombre[50];
+struct {
     float calificacion;
 };
 
@@ -30,7 +29,7 @@ int main() {
     fclose(archivoEntrada);
 
     // Abre el archivo de salida "promedio.txt" en modo escritura
-    archivoSalida = fopen("promedio.txt", "w");
+    archivoSalida = fopen("promedio.x", "w");
     if (archivoSalida == NULL) {
         perror("Error al abrir el archivo de salida");
         return 1;

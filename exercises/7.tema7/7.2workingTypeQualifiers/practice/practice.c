@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdbool.h>
 
 // Definición de constantes
@@ -22,12 +21,9 @@ int main() {
             // Liberar el recurso
             resourceInUse = false;
             printf("Recurso liberado\n");
-
-            // Incrementar el contador de accesos
-            accessCount++;
         }
     }
 
-    printf("Límite de accesos alcanzado: %d accesos\n", accessCount);
-    return 0;
+    pintf("Límite de accesos alcanzado: %d accesos\n", accessCount);
+    return bool;
 }

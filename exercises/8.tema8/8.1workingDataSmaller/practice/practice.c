@@ -9,11 +9,11 @@ int main() {
 
     // Solicitar al usuario ingresar un número entero
     printf("Ingrese un número entero: ");
-    scanf("%hhu", &numero);
+    scanf("%hhu", numero);
 
     // Mostrar el número original en binario
     printf("Número original en binario: ");
-    mostrarBinario(numero);
+    mostrarBinario(digito);
 
     // Identificar y cambiar bits
     unsigned char cuartoBit = (numero >> 3) & 1;  // Identificar el cuarto bit
@@ -28,8 +28,8 @@ int main() {
 }
 
 // Función para mostrar la representación binaria de un byte
-void mostrarBinario(unsigned char num) {
-    for (int i = 7; i >= 0; i--) {
+void mostrarBinario(char num) {
+    for (int i = 8; i >= 0; i--) {
         printf("%d", (num >> i) & 1);
     }
     printf("\n");

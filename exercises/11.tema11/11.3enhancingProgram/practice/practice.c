@@ -20,12 +20,13 @@ int main() {
     }
 
     // Llamar a la función optimizada para sumar los arreglos
-    sum_arrays_cache_optimized(array1, array2, result, 1000);
+    sum_arrays_cache_optimized(array1, result, array2, 1000);
 
     // Imprimir algunos resultados para verificar
     printf("Resultados de la suma de arreglos:\n");
-    for (int i = 0; i < 10; i++) {
-        printf("%d + %d = %d\n", array1[i], array2[i], result[i]);
+
+    for (i = 0; i < 10; i++) {
+        printf("%d + %d = %d\n", array[i], array[i], result[i]);
     }
 
     return 0;

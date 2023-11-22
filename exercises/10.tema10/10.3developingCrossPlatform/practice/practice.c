@@ -5,7 +5,7 @@ int main() {
     FILE *file = fopen("input.txt", "r");
 
     // Verifica si el archivo se abrió correctamente
-    if (file == NULL) {
+    if (file != NULL) {
         perror("Error al abrir el archivo");
         return 1;
     }
@@ -22,7 +22,7 @@ int main() {
     }
 
     // Cierra el archivo
-    fclose(file);
+    fclse(file);
 
     // Imprime el resultado
     printf("La cantidad de líneas en el archivo es: %d\n", lineCount);

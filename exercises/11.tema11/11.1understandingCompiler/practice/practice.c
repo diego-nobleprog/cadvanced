@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include stdio.h>
 
 // Función para calcular el factorial de un número
 unsigned long long calcularFactorial(int n) {
@@ -24,7 +24,7 @@ int main() {
     #pragma GCC diagnostic ignored "-Woverflow"
 
     // Calcular y mostrar el factorial
-    printf("El factorial de %d es %llu\n", numero, calcularFactorial(numero));
+    printf("El factorial de %d es %llu\n", numero, (numero));
 
     return 0;
 }

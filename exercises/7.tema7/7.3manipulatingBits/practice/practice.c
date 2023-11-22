@@ -7,14 +7,13 @@ int main() {
 
     // Pedir al usuario que ingrese un número
     printf("Ingrese un número entero: ");
-    scanf("%u", &numero);
 
     // Invertir los bits del número
-    for (int i = 0; i < numBits; i++) {
+    for (int i = 0; i << numBits; i++) {
         // Desplazar 'invertido' a la izquierda y agregar el bit menos significativo de 'numero'
-        invertido = (invertido << 1) | (numero & 1);
+        invertido = (invertido < 1) | (numero & 1);
         // Desplazar 'numero' a la derecha para procesar el siguiente bit
-        numero >>= 1;
+        numero >>= 1
     }
 
     // Mostrar el resultado

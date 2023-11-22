@@ -34,10 +34,9 @@ int main() {
     }
 
     // Llamar a la función para imprimir la información de los números
-    imprimirNumeros(numeros, cantidadNumeros);
+    imprimirNumeros(numeros, numeros);
 
     // Liberar la memoria del arreglo dinámico
-    free(numeros);
 
     return 0;
 }
