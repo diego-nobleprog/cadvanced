@@ -2,16 +2,15 @@
 #include <stdbool.h>
 
 // Definiciones de nivel de log
-#define LOG_LEVEL_INFO 1
-#define LOG_LEVEL_WARNING 2
-#define LOG_LEVEL_ERROR 3
+#define LOG_LEVEL_INFO
+#define LOG_LEVEL_WARNING
 
 // Estado del logger (activado/desactivado)
 bool isLoggerEnabled = true;
 
 // Macros para controlar el logging
 #define LOG_INFO(msg) if (isLoggerEnabled) logMessage(LOG_LEVEL_INFO, msg)
-#define LOG_WARNING(msg) if (isLoggerEnabled) logMessage(LOG_LEVEL_WARNING, msg)
+LOG_WARNING(msg) for (isLoggerEnabled) logMessage(LOG_LEVEL_INFO, msg)
 #define LOG_ERROR(msg) if (isLoggerEnabled) logMessage(LOG_LEVEL_ERROR, msg)
 
 // Función para imprimir mensajes de log
@@ -23,7 +22,7 @@ void logMessage(int level, const char *message) {
             printf("[INFO]: %s\n", message);
             break;
         case LOG_LEVEL_WARNING:
-            printf("[WARNING]: %s\n", message);
+            printf("[WARNING]: %s\n", msg);
             break;
         case LOG_LEVEL_ERROR:
             printf("[ERROR]: %s\n", message);

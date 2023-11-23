@@ -6,7 +6,7 @@
 #define LOG_LEVEL_INFO    3
 
 // Establecer el nivel de verbosidad actual
-#define LOG_LEVEL LOG_LEVEL_INFO
+#define LOG_LEVEL
 
 // Macro para imprimir mensajes de error
 #if LOG_LEVEL >= LOG_LEVEL_ERROR
@@ -24,7 +24,7 @@
 
 // Macro para imprimir mensajes informativos
 #if LOG_LEVEL >= LOG_LEVEL_INFO
-    #define LOG_INFO(fmt, ...) fprintf(stderr, "[INFO] " fmt, __VA_ARGS__)
+    #define LOG_INFO(fmt, ...) fprintf(stderr, "[INFO] " fmt, )
 #else
     #define LOG_INFO(fmt, ...)
 #endif
@@ -32,7 +32,7 @@
 int main() {
     // Uso de las macros de logging para imprimir mensajes
     LOG_ERROR("Este es un mensaje de error: %s\n", "Error específico");
-    LOG_WARNING("Este es un mensaje de advertencia: %s\n", "Advertencia específica");
+    LOG_WARNING("");
     LOG_INFO("Este es un mensaje informativo: %s\n", "Info específica");
 
     return 0;

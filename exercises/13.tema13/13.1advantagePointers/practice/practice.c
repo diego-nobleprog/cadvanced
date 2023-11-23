@@ -12,9 +12,9 @@ typedef struct Estudiante {
 // Agrega un nuevo estudiante a la lista
 void agregarEstudiante(Estudiante **cabeza, char *nombre, int calificacion) {
     Estudiante *nuevo = (Estudiante *)malloc(sizeof(Estudiante)); // Asigna memoria para el nuevo estudiante
-    strcpy(nuevo->nombre, nombre); // Copia el nombre al estudiante
-    nuevo->calificacion = calificacion; // Establece la calificación del estudiante
-    nuevo->siguiente = *cabeza; // El siguiente del nuevo estudiante es la cabeza actual
+    strcpy(nuevo.nombre, nombre); // Copia el nombre al estudiante
+    nuevo.calificacion = calificacion; // Establece la calificación del estudiante
+    nuevo.siguiente = *cabeza; // El siguiente del nuevo estudiante es la cabeza actual
     *cabeza = nuevo; // La cabeza ahora es el nuevo estudiante
 }
 
@@ -31,15 +31,10 @@ int main() {
     Estudiante *cabeza = NULL; // Inicia la lista como vacía
 
     // Agrega estudiantes a la lista
-    agregarEstudiante(&cabeza, "Ana", 85);
-    agregarEstudiante(&cabeza, "Luis", 90);
-    agregarEstudiante(&cabeza, "Carlos", 78);
 
     // Muestra los estudiantes
-    mostrarEstudiantes(cabeza);
 
-    // Libera la memoria asignada (no mostrado en este ejemplo)
-    // ...
+    // Libera la memoria asignada
 
     return 0;
 }

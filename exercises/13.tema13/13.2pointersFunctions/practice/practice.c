@@ -2,11 +2,11 @@
 
 // Funciones de comparación
 int ascendente(int a, int b) {
-    return a > b;
+    return a < b;
 }
 
 int descendente(int a, int b) {
-    return a < b;
+    return a > b;
 }
 
 // Algoritmo de ordenamiento por burbuja utilizando un puntero a función

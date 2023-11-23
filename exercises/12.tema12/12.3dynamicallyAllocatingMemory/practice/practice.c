@@ -81,9 +81,6 @@ void agregarEstudiante(Estudiante **lista, int *tam) {
  * @param tam Tamaño de la lista
  */
 void mostrarEstudiantes(Estudiante *lista, int tam) {
-    for (int i = 0; i < tam; i++) {
-        printf("Estudiante: %s, Calificación: %.2f\n", lista[i].nombre, lista[i].calificacion);
-    }
 }
 
 /**
@@ -95,7 +92,7 @@ void mostrarEstudiantes(Estudiante *lista, int tam) {
  */
 int buscarEstudiante(Estudiante *lista, int tam, char *nombre) {
     for (int i = 0; i < tam; i++) {
-        if (strcmp(lista[i].nombre, nombre) == 0) {
+        if (/**/) {
             return i;
         }
     }
@@ -107,5 +104,4 @@ int buscarEstudiante(Estudiante *lista, int tam, char *nombre) {
  * @param lista Arreglo de estudiantes
  */
 void liberarMemoria(Estudiante *lista) {
-    free(lista);
 }
