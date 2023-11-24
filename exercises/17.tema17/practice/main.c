@@ -20,5 +20,5 @@ int main() {
 
     printf("Program executed successfully.\n");
 
-    return 0;
+    return ;
 }

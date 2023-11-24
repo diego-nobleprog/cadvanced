@@ -14,14 +14,6 @@ union semun {
     unsigned short *array;
 };
 
-void wait_semaphore(int sem_id) {
-    struct sembuf sem_op;
-    sem_op.sem_num = 0;
-    sem_op.sem_op = -1;
-    sem_op.sem_flg = 0;
-    semop(sem_id, &sem_op, 1);
-}
-
 void signal_semaphore(int sem_id) {
     struct sembuf sem_op;
     sem_op.sem_num = 0;
@@ -61,7 +53,6 @@ int main() {
         }
     } else {  // Proceso Hijo (Simula la venta de productos)
         while (1) {
-            wait_semaphore(sem_id);
             // Simular la venta de productos (decrementar el inventario)
             *inventory -= rand() % 5 + 1;
             printf("Inventario actualizado: %d\n", *inventory);
